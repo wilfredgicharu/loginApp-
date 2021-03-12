@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navhostfragment"
+    app:startDestination="@id/welcomeFrag">
+
+    <fragment
+        android:id="@+id/welcomeFrag"
+        android:name="com.example.loginapp.WelcomeFrag"
+        android:label="fragment_welcome"
+        tools:layout="@layout/fragment_welcome" >
+        <action
+            android:id="@+id/action_welcomeFrag_to_registerFrag"
+            app:destination="@id/registerFrag" />
+        <action
+            android:id="@+id/action_welcomeFrag_to_loginFrag"
+            app:destination="@id/loginFrag" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFrag"
+        android:name="com.example.loginapp.LoginFrag"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFrag_to_destinationFrag"
+            app:destination="@id/destinationFrag" />
+        <action
+            android:id="@+id/action_loginFrag_to_registerFrag"
+            app:destination="@id/registerFrag" />
+    </fragment>
+    <fragment
+        android:id="@+id/destinationFrag"
+        android:name="com.example.loginapp.DestinationFrag"
+        android:label="fragment_destination"
+        tools:layout="@layout/fragment_destination" >
+        <action
+            android:id="@+id/action_destinationFrag_to_welcomeFrag"
+            app:destination="@id/welcomeFrag" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFrag"
+        android:name="com.example.loginapp.RegisterFrag"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register" >
+        <action
+            android:id="@+id/action_registerFrag_to_destinationFrag"
+            app:destination="@id/destinationFrag" />
+        <action
+            android:id="@+id/action_registerFrag_to_loginFrag"
+            app:destination="@id/loginFrag" />
+    </fragment>
+</navigation>
